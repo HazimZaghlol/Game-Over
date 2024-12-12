@@ -5,7 +5,7 @@ export class GamesUi {
   constructor() {
     this.getAllGames("mmorpg");
     this.games = new Games();
-    // console.log(this.showGameDetails());
+  
 
     document.querySelectorAll(".menu a").forEach((link) => {
       link.addEventListener("click", (e) => {
