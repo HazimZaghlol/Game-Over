@@ -32,21 +32,21 @@ export class GamesUi {
       .then((response) => response.json())
       .then((response) => {
         this.games.displayGames(response);
-        this.startEvent();
+        this.ShowCardDetails();
       })
       .finally(() => {
         loading.classList.add("d-none");
       });
   }
-  startEvent() {
+  ShowCardDetails() {
     document.querySelectorAll(".card").forEach((item) => {
       item.addEventListener("click", () => {
         const id = item.dataset.id;
-        this.showGameDetails(id);
+        this.ShowGameDetails(id);
       });
     });
   }
-  showGameDetails(id) {
+  ShowGameDetails(id) {
     new Details(id);
     document.querySelector(".games").classList.add("d-none");
     document.querySelector(".details").classList.remove("d-none");
